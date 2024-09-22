@@ -1,0 +1,21 @@
+<div class="monitors">
+  <div class="title">Monitors</div>
+  <div class="sub-title">Here you can select the monitor view</div>
+  <div class="form">
+    @for (menu of menus(); track menu.Id)
+    {
+      <label>Monitor {{$index + 1}}</label>
+      <div class="m-item">
+        <mat-form-field>
+          <mat-select [(value)]="menu['SelectedProduct']" [placeholder]="'Select monitor ' + ($index + 1)">
+            @for (product of menu.SubMenu; track product.Id)
+            {
+              <mat-option [value]="product">{{product.Name}}</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+        <button mat-raised-button  (click)="open(menu)" i18n>Open</button>
+      </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,4 @@
+<mat-form-field class="example-full-width">
+  <mat-label i18n>Barcode</mat-label>
+  <input i18n-placeholder #barcodeInput matInput placeholder="Barcode" value="" (change)="reportService.update({'Barcode':barcodeInput.value})">
+</mat-form-field>

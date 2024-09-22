@@ -1,0 +1,8 @@
+<mat-form-field>
+  <mat-label i18n>Select product</mat-label>
+  <mat-select #productSelect (selectionChange)="reportService.update({'GameId':$event.value})">
+    @for (product of products(); track product.Id) {
+      <mat-option [value]="product.Id">{{product.Name}}</mat-option>
+    }
+  </mat-select>
+</mat-form-field>

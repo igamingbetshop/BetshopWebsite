@@ -1,0 +1,8 @@
+<mat-menu #childMenu="matMenu" [overlapTrigger]="false">
+  @for (document of documentMenu().Documents; track $index)
+  {
+    <a [href]="document.Path" download>
+      <button i18n mat-menu-item>{{document.Title}}</button>
+    </a>
+  }
+</mat-menu>

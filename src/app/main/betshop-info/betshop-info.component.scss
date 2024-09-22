@@ -1,0 +1,16 @@
+@import 'mixins';
+:host
+{
+  min-width: 260px;
+  position: relative;
+  @include flex-h-center;
+  padding: 30px;
+  flex-direction: column;
+  gap: 10px;
+  .close-button
+  {
+    position: absolute;
+    top:0;
+    right: 0;
+  }
+}

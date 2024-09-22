@@ -1,0 +1,32 @@
+@import 'mixins';
+:host
+{
+  min-width: 260px;
+  position: relative;
+  @include flex-h-center;
+  padding: 24px;
+  flex-direction: column;
+  gap: 10px;
+  .title{font-size: 1.3rem;font-weight: 700; @include flex-v-center; gap: 10px}
+  .sub-title{font-size: 0.8rem; color: #79859B;}
+  .close-button
+  {
+    position: absolute;
+    top:0;
+    right: 0;
+  }
+  .actions
+  {
+    @include flex-space-between;
+    button{flex:1; border-radius: 10px; background: #6B96F4; color: #FFFFFF; font-weight: 500; font-size: 1rem};
+    gap: 10px;
+  }
+  .ticket-view
+  {
+    @include flex-h-center;
+    flex-direction: column;
+    gap: 10px;
+    span:first-child{font-weight: 700;}
+  }
+  .mat-mdc-form-field{width: 100%;}
+}

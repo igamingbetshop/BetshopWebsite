@@ -1,0 +1,126 @@
+<h2 i18n>Client profile</h2>
+<form [formGroup]="formGroup" class="form">
+  <mat-form-field>
+    <input i18n-placeholder matInput readonly placeholder="Id" formControlName="Id">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label i18n>Email</mat-label>
+    <input i18n-placeholder matInput formControlName="Email" placeholder="Email">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput readonly placeholder="CurrencyId" formControlName="CurrencyId">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput  readonly placeholder="UserName" formControlName="UserName">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label i18n>FirstName</mat-label>
+    <input matInput formControlName="FirstName">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label i18n>LastName</mat-label>
+    <input matInput formControlName="LastName">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label i18n>Gender</mat-label>
+    <input i18n-placeholder matInput readonly placeholder="Gender" formControlName="GenderName">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label i18n>BirthDate</mat-label>
+    <input matInput formControlName="BirthDate">
+  </mat-form-field>
+  <mat-form-field>
+    <input i18n-placeholder matInput readonly placeholder="Address" formControlName="Address">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label i18n>MobileNumber</mat-label>
+    <input matInput formControlName="MobileNumber">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label i18n>DocumentNumber</mat-label>
+    <input matInput formControlName="DocumentNumber">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label i18n>ZipCode</mat-label>
+    <input matInput formControlName="ZipCode">
+  </mat-form-field>
+  <mat-form-field>
+    <input i18n-placeholder matInput readonly placeholder="Creation Time" formControlName="CreationTime">
+  </mat-form-field>
+  <div class="actions flex-between">
+    <button mat-raised-button color="primary" (click)="updateClient()" i18n>Update</button>
+    <button mat-raised-button color="warn" (click)="generateCard()" i18n>Card detach</button>
+    <button mat-raised-button color="accent" (click)="assignPin()" i18n>Assign pin</button>
+    <button mat-raised-button color="warn" (click)="resetPassword()" i18n>Reset password</button>
+  </div>
+</form>
+
+@if (client && client.Accounts)
+{
+  <div class="accounts">
+    <h2 i18n>Accounts</h2>
+
+    <table class="accounts-table">
+
+      <tr class="table-header">
+        <th i18n class="account-table-columns account-table-th">AccountTypeName</th>
+        <th i18n class="account-table-columns account-table-th">Balance</th>
+      </tr>
+
+      @for (account of client.Accounts; track $index)
+      {
+        <tr>
+          <td class="account-table-columns">{{account.AccountTypeName}}</td>
+          <td class="account-table-columns">
+            <div class="form-input-field" style="display:flex;align-items: center; justify-content: center">
+                <div style="margin: 5px 0;">
+                    <span>{{account.Balance}}</span> <span>&nbsp;</span><span>{{account.CurrencyId}}</span>
+                </div>
+                <div class="payment-part">
+                  @if (account.BetShopId !== null && account.PaymentSystemId === null && openedDeposit === false)
+                  {
+                    <div>
+                      <button mat-raised-button color="primary" (click)="openDepositAmount(account)" i18n>Deposit</button>
+                    </div>
+                  }
+
+                  @if (openedDeposit && account.Id === openedAccount.Id)
+                  {
+                    <div class="form-input-field">
+                      <mat-form-field>
+                        <input type="text" matInput placeholder="Amount"
+                        name="Amount" [(ngModel)]="depositAmount">
+                      </mat-form-field>
+                      <button  mat-raised-button color="primary"  (click)="payDeposit()" i18n>Pay</button>
+                  </div>
+                  }
+
+                  @if (openedDeposit && account.Id === openedAccount.Id && openedWithdraw === false)
+                  {
+                    <div>
+                      <button  mat-raised-button color="warn" (click)="openWithdrawAmount(account)" i18n>Withdraw</button>
+                  </div>
+                  }
+
+                  @if (openedWithdraw && account.Id === openedAccount.Id)
+                  {
+                    <div class="form-input-field">
+                      <mat-form-field>
+                        <input type="text" placeholder="Amount" matInput
+                        name="Amount"[(ngModel)]="withdrawAmount" autocomplete="off">
+                      </mat-form-field>
+                      <button  mat-raised-button color="primary" (click)="payWithdraw()" i18n>Pay</button>
+                    </div>
+                  }
+                </div>
+            </div>
+        </td>
+        </tr>
+      }
+    </table>
+  </div>
+}
+
+
+
+

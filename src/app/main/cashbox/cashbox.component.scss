@@ -1,0 +1,62 @@
+@import 'mixins';
+:host
+{
+  width: 100%;
+  max-width: 720px;
+  display: block;
+  padding: 20px;
+  margin: 0 auto;
+  header
+  {
+    height: 32px;
+    display: flex;
+    align-items: center;
+    font-size: 1.375rem;
+    gap: 5px;
+    font-weight: 700;
+    .close-button{color: #79859B; margin-left: auto; cursor: pointer}
+  }
+  main
+  {
+    font-size: 1.125rem;
+    ul
+    {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      li
+      {
+        display: flex;
+        height: 30px;
+        span
+        {
+          display: inline-block;
+          height: inherit;
+          line-height: 30px;
+          flex:1;
+        }
+      }
+    }
+  }
+  footer
+  {
+    font-size: 1.125rem;
+    border-top: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    background: #f8f8f8;
+    .ft-item
+    {
+      @include flex-v-center;
+      gap: 30px;
+      >*
+      {
+        &:first-child{width: 150px}
+      }
+    }
+    .title{padding-bottom: 0}
+  }
+  .title{font-weight: 600; padding:12px 0}
+}

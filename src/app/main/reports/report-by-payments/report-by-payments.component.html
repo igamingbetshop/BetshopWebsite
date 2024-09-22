@@ -1,0 +1,14 @@
+<header>
+  <bs-report-filter [type]="'payments'" (onFilter)="getData($event)"></bs-report-filter>
+</header>
+<ag-grid-angular
+    style="width: 100%; height: calc(100% - 160px)"
+    class="ag-theme-alpine"
+    [columnDefs]="columnDefs"
+    [defaultColDef]="defaultColDef"
+    [rowData]="rowData()"
+    [animateRows]="true"
+    [enableCellTextSelection]="true"
+    [getContextMenuItems]="getContextMenuItems"
+    (gridReady)="onGridReady($event)"
+  ></ag-grid-angular>

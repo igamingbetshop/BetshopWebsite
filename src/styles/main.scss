@@ -1,0 +1,94 @@
+@use '@angular/material' as mat;
+@import 'mixins';
+@import 'fonts';
+@import 'ag-grid-community/styles/ag-grid.css';
+@import 'ag-grid-community/styles/ag-theme-alpine.css';
+@include mat.form-field-density(-5);
+.page{height: calc(100vh - 45px);}
+.disabled, [disabled]
+{
+  pointer-events: none;
+  opacity: .5;
+}
+.common-btn
+{
+  color: #ffffff;
+  background: #6B96F4;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 0 17px;
+  height: 54px;
+  line-height: 54px;
+}
+.error
+{
+  color: red;
+  text-align: center;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  white-space: nowrap;
+}
+.error-snackbar
+{
+  --mdc-snackbar-container-color: red;
+  --mat-snack-bar-button-color: black;
+  --mdc-snackbar-supporting-text-color: white;
+}
+
+.flex-between
+{
+  @include flex-space-between();
+}
+.ag-details-grid-fixed-height
+{
+  height: 120px;
+  overflow-y: auto;
+}
+:root
+{
+  --mat-sidenav-container-width:100%;
+  --mat-sidenav-content-background-color:none;
+}
+html {
+  font-size: 16px;
+}
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+body
+{
+  color: #182338;
+  background: #F4F5FC;
+  &.login{background: linear-gradient(to top left, #ADC6F9, #608BF3, #608BF3)}
+}
+.ticket-validation
+{
+  --mdc-dialog-container-shape:10px;
+  --mat-dialog-container-small-max-width:90vw;
+  --mat-form-field-subscript-text-line-height:15px;
+}
+.calculator, .cashbox
+{
+  --mdc-dialog-container-shape:10px;
+  .ag-theme-alpine .ag-header {
+    background: #E1EAFD;
+  }
+}
+/* Change the border color */
+.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__leading,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__notch,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__trailing {
+  border-color:  #E1EAFD!important;
+}
+.mat-mdc-text-field-wrapper {
+  background-color: #F6F7FA!important;
+}

@@ -1,0 +1,97 @@
+<!--
+<div class="navigation">
+  <ul>
+    @for (product of productsMenu(); track product.Id)
+    {
+      <li [routerLink]="'/products/' + product.Href" routerLinkActive="selected">{{product.Name}}</li>
+    }
+  </ul>
+
+  <ul class="right-side">
+    @for (menu of generalMenu(); track menu.Id)
+    {
+      <li [routerLink]="menu.Href" routerLinkActive="selected">{{menu.Name}}</li>
+    }
+    <li><bs-documents></bs-documents></li>
+    <li><bs-actions></bs-actions></li>
+    <bs-balance-limit i18n-type type="balance"></bs-balance-limit>
+    <bs-balance-limit  i18n-type type="limit"></bs-balance-limit>
+    <li [routerLink]="['settings']"><i class="fa fa-cog"></i></li>
+    <li i18n-title title="Calculator" [routerLink]="['calculator']"><i class="fas fa-calculator"></i></li>
+    <li i18n-title title="Cashbox"><i class="fas fa-cash-register" [routerLink]="['cash-box']"></i></li>
+    <li><i class="fa fa-barcode" (click)="openTicketValidation()"></i></li>
+    <li><i class="fa fa-power-off" (click)="authService.logout()"></i></li>
+  </ul>
+</div>
+-->
+<div class="navigation">
+  <img class="logo" src="assets/images/logo.svg">
+  @for (menu of leftMenus(); track menu.Id)
+  {
+    @if(menu.HasChildren)
+    {
+      <div class="collapse-box" dropdown [routerLinkActiveGroup]="menu" [url]="urlAfterRedirects()">
+        <div class="header" >
+          <span>{{menu.Name}}</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
+            <path d="M1 1L7 7L13 1" stroke="#182338" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <ul class="content">
+          @for (subMenu of menu.SubMenu; track subMenu.Id)
+          {
+            <li (click)="selectionChange($event, subMenu.RouterLink)">{{subMenu.Name}}</li>
+          }
+        </ul>
+      </div>
+    }
+    @else
+    {
+      <div class="collapse-box" [routerLinkActiveGroup]="menu" [url]="urlAfterRedirects()">
+        <div class="header" (click)="selectionChange($event, menu.RouterLink)">
+          <span>{{menu.Name}}</span>
+        </div>
+      </div>
+    }
+  }
+  <div class="right-side">
+    <bs-balance-limit i18n-type type="balance"></bs-balance-limit>
+    <bs-balance-limit  i18n-type type="limit"></bs-balance-limit>
+    @for (menu of cashBoxMenus(); track menu.Id)
+    {
+      <div class="collapse-box right-content" dropdown>
+        <div class="header" >
+          <img ngSrc="assets/images/calculator.svg" height="22" width="18">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
+            <path d="M1 1L7 7L13 1" stroke="#182338" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <ul class="content">
+          @for (subMenu of menu.SubMenu; track subMenu.Id)
+          {
+            <li (click)="selectionChange($event, subMenu.RouterLink)">{{subMenu.Name}}</li>
+          }
+        </ul>
+      </div>
+    }
+    @for (menu of settingsMenus(); track menu.Id)
+    {
+      <div class="collapse-box right-content" dropdown>
+        <div class="header" >
+          <img ngSrc="assets/images/user.svg" height="22" width="18">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
+            <path d="M1 1L7 7L13 1" stroke="#182338" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <ul class="content">
+          @for (subMenu of menu.SubMenu; track subMenu.Id)
+          {
+            <li (click)="selectionChange($event, subMenu.RouterLink)"><img [src]="subMenu.Icon">{{subMenu.Name}}</li>
+          }
+          <li (click)="openTicketValidation()"><img src="assets/images/scanner.svg"> Ticket Validation</li>
+          <li class="logout" (click)="authService.logout()"><img src="assets/images/signin.svg"> Log Out</li>
+        </ul>
+      </div>
+    }
+  </div>
+</div>

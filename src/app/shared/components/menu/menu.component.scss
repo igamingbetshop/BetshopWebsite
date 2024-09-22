@@ -1,0 +1,30 @@
+@import 'mixins';
+.menu
+{
+  @include flex-v-center;
+  list-style-type: none;
+  li
+  {
+    padding: 0 10px;
+    height: 40px;
+    @include flex-v-center;
+    cursor: pointer;
+    a
+    {
+      border-bottom: 1px dotted gray;
+      font-size: 18px;
+    }
+    &.hover
+    {
+      a{color: #4280ff}
+    }
+    &.selected
+    {
+      a
+      {
+        color: #4280ff;
+        font-weight: 700;
+      }
+    }
+  }
+}

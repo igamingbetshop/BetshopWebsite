@@ -1,0 +1,24 @@
+@import 'mixins';
+.balance
+{
+  text-transform: capitalize;
+  @include flex-v-center;
+  padding: 8px 16px 8px 8px;
+  gap: 6px;
+  background: #F6F7FA;
+  border-radius: 10px;
+  color: #304671;
+  font-size: 1rem;
+  font-family: 'Circular', sans-serif;
+  font-weight: 600;
+  span{font-weight: 600; color: #182338;}
+}
+@media (max-width: 550px)
+{
+  .balance{font-size: 0.875rem;}
+}
+@media (max-width: 450px)
+{
+  .balance{img{display: none}}
+}
+

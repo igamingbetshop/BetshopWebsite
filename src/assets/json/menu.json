@@ -1,0 +1,366 @@
+{
+  "Type": "HeaderMenu",
+  "StyleType": null,
+  "Items": [
+    {
+      "Id": 35165,
+      "Icon": "",
+      "Title": "Sport",
+      "Type": "products",
+      "StyleType": "",
+      "Href": "sport",
+      "OpenInRouting": false,
+      "Orientation": false,
+      "Order": 1,
+      "SubMenu": [
+        {
+          "Icon": "",
+          "Title": "Sport",
+          "Type": "6",
+          "Href": "{\"Href\":\"6\",\"CashierUrl\":\"https://sportsbookwebsite.craftbet.com/betshop\",\"MonitorUrl\":\"https://sportsbookwebsite.craftbet.com/monitor\"}",
+          "OpenInRouting": false,
+          "Order": 1,
+          "StyleType": "{\"ExternalId\":1000,\"ProviderId\":1,\"SystemBet\":1,\"ExpressBet\":1}"
+        }
+      ]
+    },
+    {
+      "Id": 35166,
+      "Icon": "",
+      "Title": "Games",
+      "Type": "products",
+      "StyleType": "",
+      "Href": "games",
+      "OpenInRouting": false,
+      "Orientation": false,
+      "Order": 2,
+      "SubMenu": [
+        {
+          "Icon": "",
+          "Title": "Bingo 48",
+          "Type": "1003",
+          "Href": "{\"Href\":\"1003\",\"CashierUrl\":\"https://virtualgameswebsite.craftbet.com/bingo48/cashier\",\"MonitorUrl\":\"https://virtualgameswebsite.craftbet.com/bingo48/monitor\"}",
+          "OpenInRouting": false,
+          "Order": 1,
+          "StyleType": "{\"ExternalId\":107,\"ProviderId\":100,\"SystemBet\":0,\"ExpressBet\":1}"
+        },
+        {
+          "Icon": "",
+          "Title": "Keno",
+          "Type": "1004",
+          "Href": "{\"Href\":\"1004\",\"CashierUrl\":\"https://virtualgameswebsite.craftbet.com/keno/cashier\",\"MonitorUrl\":\"https://virtualgameswebsite.craftbet.com/keno/monitor\"}",
+          "OpenInRouting": false,
+          "Order": 2,
+          "StyleType": "{\"ExternalId\":101,\"ProviderId\":100,\"SystemBet\":0,\"ExpressBet\":0}"
+        },
+        {
+          "Icon": "",
+          "Title": "Bet On Poker",
+          "Type": "1005",
+          "Href": "{\"Href\":\"1005\",\"CashierUrl\":\"https://virtualgameswebsite.craftbet.com/betonpoker/cashier\",\"MonitorUrl\":\"https://virtualgameswebsite.craftbet.com/betonpoker/monitor\"}",
+          "OpenInRouting": false,
+          "Order": 3,
+          "StyleType": "{\"ExternalId\":102,\"ProviderId\":100,\"SystemBet\":0,\"ExpressBet\":1}"
+        },
+        {
+          "Icon": "",
+          "Title": "Bet On Racing",
+          "Type": "1006",
+          "Href": "{\"Href\":\"1006\",\"CashierUrl\":\"https://virtualgameswebsite.craftbet.com/betonracing/cashier\",\"MonitorUrl\":\"https://virtualgameswebsite.craftbet.com/betonracing/monitor\"}",
+          "OpenInRouting": false,
+          "Order": 4,
+          "StyleType": "{\"ExternalId\":103,\"ProviderId\":100,\"SystemBet\":0,\"ExpressBet\":1}"
+        },
+        {
+          "Icon": "",
+          "Title": "Bingo 37",
+          "Type": "1001",
+          "Href": "{\"Href\":\"1006\",\"CashierUrl\":\"https://virtualgameswebsite.craftbet.com/bingo37/cashier\",\"MonitorUrl\":\"https://virtualgameswebsite.craftbet.com/betonbingo/monitor\"}",
+          "OpenInRouting": false,
+          "Order": 5,
+          "StyleType": "{\"ExternalId\":104,\"ProviderId\":100,\"SystemBet\":0,\"ExpressBet\":1}"
+        },
+        {
+          "Icon": "",
+          "Title": "Colors",
+          "Type": "1002",
+          "Href": "{\"Href\":\"1002\",\"CashierUrl\":\"https://virtualgameswebsite.craftbet.com/colors/cashier\",\"MonitorUrl\":\"https://virtualgameswebsite.craftbet.com/colors/monitor\"}",
+          "OpenInRouting": false,
+          "Order": 6,
+          "StyleType": "{\"ExternalId\":106,\"ProviderId\":100,\"SystemBet\":0,\"ExpressBet\":1}"
+        },
+        {
+          "Icon": "",
+          "Title": "Lucky6",
+          "Type": "104001",
+          "Href": "{\"Href\":\"104001\",\"CashierUrl\":\"\",\"MonitorUrl\":\"\"}",
+          "OpenInRouting": false,
+          "Order": 7,
+          "StyleType": "{\"ExternalId\":\"mylucky6_blue\",\"ProviderId\":104,\"SystemBet\":0,\"ExpressBet\":1}"
+        }
+      ]
+    },
+    {
+      "Id": 35167,
+      "Icon": "",
+      "Title": "External",
+      "Type": "products",
+      "StyleType": "",
+      "Href": "e-games",
+      "OpenInRouting": false,
+      "Orientation": false,
+      "Order": 3,
+      "SubMenu": [
+        {
+          "Icon": "",
+          "Title": "Kiron",
+          "Type": "60001",
+          "Href": "",
+          "OpenInRouting": false,
+          "Order": 1,
+          "StyleType": ""
+        }
+      ]
+    },
+    {
+      "Id": 35168,
+      "Icon": "",
+      "Title": "Payments",
+      "Type": "",
+      "StyleType": "",
+      "Href": "payments",
+      "OpenInRouting": false,
+      "Orientation": false,
+      "Order": 4,
+      "SubMenu": [
+        {
+          "Icon": "",
+          "Title": "Deposit",
+          "Type": "1",
+          "Href": "{\"Href\":\"deposit\"}",
+          "OpenInRouting": false,
+          "Order": 1,
+          "StyleType": ""
+        },
+        {
+          "Icon": "",
+          "Title": "Withdraw",
+          "Type": "2",
+          "Href": "{\"Href\":\"withdraw\"}",
+          "OpenInRouting": false,
+          "Order": 2,
+          "StyleType": ""
+        }
+      ]
+    },
+    {
+      "Id": 35169,
+      "Icon": "",
+      "Title": "Reports",
+      "Type": "",
+      "StyleType": "",
+      "Href": "reports",
+      "OpenInRouting": false,
+      "Orientation": false,
+      "Order": 5,
+      "SubMenu": [
+        {
+          "Icon": "",
+          "Title": "ReportByBets",
+          "Type": "1",
+          "Href": "{\"Href\":\"report-by-bets\"}",
+          "OpenInRouting": false,
+          "Order": 1,
+          "StyleType": ""
+        },
+        {
+          "Icon": "",
+          "Title": "ReportByShifts",
+          "Type": "2",
+          "Href": "{\"Href\":\"report-by-shifts\"}",
+          "OpenInRouting": false,
+          "Order": 2,
+          "StyleType": ""
+        },
+        {
+          "Icon": "",
+          "Title": "ReportByTransactions",
+          "Type": "3",
+          "Href": "{\"Href\":\"report-by-transactions\"}",
+          "OpenInRouting": false,
+          "Order": 3,
+          "StyleType": ""
+        },
+        {
+          "Icon": "",
+          "Title": "ReportByPayments",
+          "Type": "4",
+          "Href": "{\"Href\":\"report-by-payments\"}",
+          "OpenInRouting": false,
+          "Order": 4,
+          "StyleType": ""
+        },
+        {
+          "Icon": "",
+          "Title": "ReportByResults",
+          "Type": "5",
+          "Href": "{\"Href\":\"report-by-results\"}",
+          "OpenInRouting": false,
+          "Order": 5,
+          "StyleType": ""
+        }
+      ]
+    },
+    {
+      "Id": 35170,
+      "Icon": "",
+      "Title": "Accounts",
+      "Type": "",
+      "StyleType": "",
+      "Href": "accounts",
+      "OpenInRouting": false,
+      "Orientation": false,
+      "Order": 6,
+      "SubMenu": [
+        {
+          "Icon": "",
+          "Title": "CashDesks",
+          "Type": "1",
+          "Href": "{\"Href\":\"cash-desks\"}",
+          "OpenInRouting": false,
+          "Order": 1,
+          "StyleType": ""
+        },
+        {
+          "Icon": "",
+          "Title": "Terminals",
+          "Type": "2",
+          "Href": "{\"Href\":\"terminals\"}",
+          "OpenInRouting": false,
+          "Order": 2,
+          "StyleType": ""
+        },
+        {
+          "Icon": "",
+          "Title": "Clients",
+          "Type": "3",
+          "Href": "{\"Href\":\"clients\"}",
+          "OpenInRouting": false,
+          "Order": 3,
+          "StyleType": ""
+        },
+        {
+          "Icon": "",
+          "Title": "Register",
+          "Type": "4",
+          "Href": "{\"Href\":\"register-client\"}",
+          "OpenInRouting": false,
+          "Order": 4,
+          "StyleType": ""
+        }
+      ]
+    },
+    {
+      "Id": 35171,
+      "Icon": "",
+      "Title": "Actions",
+      "Type": "",
+      "StyleType": "",
+      "Href": "",
+      "OpenInRouting": false,
+      "Orientation": false,
+      "Order": 7,
+      "SubMenu": [
+        {
+          "Icon": "",
+          "Title": "OpenPayout",
+          "Type": "1",
+          "Href": "{\"Href\":\"open-payout\"}",
+          "OpenInRouting": false,
+          "Order": 1,
+          "StyleType": ""
+        },
+        {
+          "Icon": "",
+          "Title": "MemberCards",
+          "Type": "2",
+          "Href": "{\"Href\":\"member-cards\"}",
+          "OpenInRouting": false,
+          "Order": 2,
+          "StyleType": ""
+        }
+      ]
+    },
+    {
+      "Id": 35172,
+      "Icon": "",
+      "Title": "Settings",
+      "Type": "",
+      "StyleType": "",
+      "Href": "settings",
+      "OpenInRouting": false,
+      "Orientation": false,
+      "Order": 8,
+      "SubMenu": [
+        {
+          "Icon": "monitor",
+          "Title": "Monitors",
+          "Type": "1",
+          "Href": "{\"Href\":\"monitors\"}",
+          "OpenInRouting": false,
+          "Order": 1,
+          "StyleType": ""
+        },
+        {
+          "Icon": "printer",
+          "Title": "Devices",
+          "Type": "2",
+          "Href": "{\"Href\":\"devices\"}",
+          "OpenInRouting": false,
+          "Order": 2,
+          "StyleType": ""
+        },
+        {
+          "Icon": "password",
+          "Title": "ChangePassword",
+          "Type": "3",
+          "Href": "{\"Href\":\"change-password\"}",
+          "OpenInRouting": false,
+          "Order": 3,
+          "StyleType": ""
+        }
+      ]
+    },
+    {
+      "Id": 35173,
+      "Icon": "",
+      "Title": "Calculator",
+      "Type": "",
+      "StyleType": "",
+      "Href": "",
+      "OpenInRouting": false,
+      "Orientation": false,
+      "Order": 9,
+      "SubMenu": [
+        {
+          "Icon": "",
+          "Title": "Calculator",
+          "Type": "1",
+          "Href": "{\"Href\":\"calculator\"}",
+          "OpenInRouting": false,
+          "Order": 1,
+          "StyleType": ""
+        },
+        {
+          "Icon": "",
+          "Title": "CashBox",
+          "Type": "2",
+          "Href": "{\"Href\":\"cash-box\"}",
+          "OpenInRouting": false,
+          "Order": 2,
+          "StyleType": ""
+        }
+      ]
+    }
+  ]
+}

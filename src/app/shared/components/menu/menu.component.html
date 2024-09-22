@@ -1,0 +1,5 @@
+<ul class="menu" *ngIf="menuDirective.isRender()">
+  <li *ngFor="let menuItem of menuDirective.menu()" [routerLink]="[menuItem.Href]" routerLinkActive="selected">
+    <a>{{menuItem.Name}}</a>
+  </li>
+</ul>

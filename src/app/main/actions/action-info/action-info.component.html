@@ -1,0 +1,14 @@
+<header>
+  <span i18n>{{data.title}}</span>
+  <button mat-icon-button class="close-button" [mat-dialog-close]="true">
+    <mat-icon class="close-icon">close</mat-icon>
+  </button>
+</header>
+<main>
+  <span i18n>Total:</span>
+  <span>{{total()}}</span>
+</main>
+<footer>
+  <button mat-raised-button color="primary" (click)="dialogRef.close()" i18n>Ok</button>
+</footer>
+

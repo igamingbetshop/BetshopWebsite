@@ -1,0 +1,65 @@
+<button mat-icon-button class="close-button" [mat-dialog-close]="true">
+  <mat-icon class="close-icon">close</mat-icon>
+</button>
+<div class="title" i18n><img src="assets/images/ticket-validation.svg">Ticket validation</div>
+<div class="sub-title">Verify your ticket by entering the barcode below</div>
+
+@if (!ticketInfo().Submitted)
+{
+  <div>
+    <mat-form-field>
+      <mat-label i18n>Ticket barcode</mat-label>
+      <input matInput #barcodeHref (change)="barcode.set(barcodeHref.value)">
+    </mat-form-field>
+  </div>
+  <div class="actions">
+    <button mat-raised-button (click)="search()" i18n>Search</button>
+  </div>
+}
+@else
+{
+  @if(ticketInfo().Data)
+  {
+    <div class="ticket-view">
+      <div class="flex-between">
+        <span i18n>Ticket id</span>
+        <span>{{ticketInfo().Data.Barcode}}</span>
+      </div>
+      <div class="flex-between">
+        <span i18n>Status</span>
+        <span>{{ticketInfo().Data.StateName}}</span>
+      </div>
+      <div class="flex-between">
+        <span i18n>Bet amount</span>
+        <span>{{ticketInfo().Data.BetAmount}}</span>
+      </div>
+      <div class="flex-between">
+        <span i18n>Win amount</span>
+        <span>{{ticketInfo().Data.WinAmount}}</span>
+      </div>
+      <div class="flex-between">
+        <span i18n>Date</span>
+        <span>{{ticketInfo().Data.BetDate}}</span>
+      </div>
+    </div>
+    <mat-radio-group #shiftCountOptions aria-label="Select acceptance mode" [value]="acceptMode()"  (change)="acceptMode.set($event.value)">
+      <mat-radio-button value="1" i18n>None</mat-radio-button>
+      <mat-radio-button value="2" i18n>Higher odds</mat-radio-button>
+      <mat-radio-button value="3" i18n>Any odds</mat-radio-button>
+    </mat-radio-group>
+    <div class="actions">
+      <button mat-raised-button (click)="pay()" color="primary" i18n>Repeat</button>
+      @if (ticketInfo().Data.State === 1)
+      {
+        <button mat-raised-button (click)="cashOut()" color="primary" i18n>CashOut</button>
+      }
+    </div>
+  }
+  @else
+  {
+    <div class="ticket-not-found" i18n>Ticket not found</div>
+  }
+}
+
+
+

@@ -1,0 +1,17 @@
+<header>
+  <bs-report-filter [type]="'results'" (onFilter)="getData($event)"></bs-report-filter>
+</header>
+<ag-grid-angular
+    style="width: 100%; height: calc(100% - 160px)"
+    class="ag-theme-alpine"
+    [pagination]="true"
+    [columnDefs]="columnDefs"
+    [rowModelType]="rowModelType"
+    [cacheBlockSize]="cacheBlockSize"
+    [defaultColDef]="defaultColDef"
+    [rowData]="rowData()"
+    [animateRows]="true"
+    [enableCellTextSelection]="true"
+    [getContextMenuItems]="getContextMenuItems"
+    (gridReady)="onGridReady($event)"
+  ></ag-grid-angular>

@@ -1,0 +1,57 @@
+<mat-form-field>
+  <mat-label>Year</mat-label>
+  <mat-select formControlName="BirthYear" (selectionChange)="changeYear()">
+    @for(year of years(); track year)
+    {
+      <mat-option [value]="year">{{year}}</mat-option>
+    }
+  </mat-select>
+  @if(isValid)
+  {
+    <mat-error>
+      Date is not valid
+    </mat-error>
+  }
+</mat-form-field>
+<mat-form-field>
+  <mat-label>Month</mat-label>
+  <mat-select formControlName="BirthMonth" (selectionChange)="changeMonth()">
+    @for(month of months(); track month.Id)
+    {
+      <mat-option [value]="month.Id">{{month.Name}}</mat-option>
+    }
+  </mat-select>
+</mat-form-field>
+<mat-form-field>
+  <mat-label>Day</mat-label>
+  <mat-select formControlName="BirthDay">
+    @for(day of days(); track day)
+    {
+      <mat-option [value]="day">{{day}}</mat-option>
+    }
+  </mat-select>
+</mat-form-field>
+<!--
+<select formControlName="BirthYear" (change)="changeYear()">
+  <option value="" i18n>Year</option>
+  @for(year of years(); track year)
+  {
+    <option [value]="year">{{year}}</option>
+  }
+</select>
+
+<select formControlName="BirthMonth" (change)="changeMonth()">
+  <option value="" i18n>Month</option>
+  @for(month of months(); track month.Id)
+  {
+    <option [value]="month.Id">{{month.Name}}</option>
+  }
+</select>
+<select formControlName="BirthDay">
+  <option value="" i18n>Day</option>
+  @for(day of days(); track day)
+  {
+    <option  [value]="day">{{day}}</option>
+  }
+</select>
+-->

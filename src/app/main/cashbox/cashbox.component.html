@@ -1,0 +1,58 @@
+<header>
+  <img src="assets/images/cashbox-d.svg">
+  <span i18n>Cashbox</span>
+  <img class="close-button" src="assets/images/close-d.svg" [mat-dialog-close]="true">
+</header>
+<main>
+  <ul>
+    <div class="title">Transactions</div>
+    <li>
+      <span i18n>Customer Deposit</span>
+      <span>{{data().Deposit}}</span>
+    </li>
+    <li>
+      <span i18n>Customer Withdraw</span>
+      <span>{{data().Withdraw}}</span>
+    </li>
+    <li>
+      <span i18n>Bet Amount</span>
+      <span>{{data().Amount}}</span>
+    </li>
+    <li>
+      <span i18n>Bet payout</span>
+      <span>{{data().Payout}}</span>
+    </li>
+    <li>
+      <span i18n>Fee</span>
+      <span>{{data().Fee}}</span>
+    </li>
+  </ul>
+</main>
+<footer>
+  <div class="title">Overview</div>
+  <div class="ft-item">
+    <div i18n>Period</div>
+    <div>{{defaultRange.FromDate | date : 'M/d/yyyy H:mm:ss'}} - {{defaultRange.ToDate | date : 'M/d/yyyy H:mm:ss'}}</div>
+  </div>
+  <div class="ft-item">
+    <div i18n>Cashbox Balance</div>
+    <div>{{balanceService.balance().Balance}}</div>
+  </div>
+  <div class="ft-item">
+    <div i18n>Affiliate</div>
+    <div>No Data</div>
+  </div>
+  <div class="ft-item">
+    <div i18n>Affiliate Id</div>
+    <div>No Data</div>
+  </div>
+  <div class="ft-item">
+    <div i18n>Cashier</div>
+    <div>{{authService.getCashier.CashierFirstName}} {{authService.getCashier.CashierLastName}}</div>
+  </div>
+  <div class="ft-item">
+    <div i18n>Cashier Id</div>
+    <div>{{authService.getCashier.CashierId}}</div>
+  </div>
+</footer>
+

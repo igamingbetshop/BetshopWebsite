@@ -1,0 +1,346 @@
+{
+  "ApiUrl": "https://betshopwebapi.craftbet.com/Main",
+  "SocketUrl": "https://betshopwebapi.craftbet.com",
+  "Version": 1,
+  "PrinterUrl": "http://127.0.0.1:8000",
+  "Languages": {
+    "en": "English",
+    "ru": "Русский",
+    "hy": "Հայերեն",
+    "de": "Deutsch",
+    "fr": "Français",
+    "it": "Italiano",
+    "pt-PT": "Português",
+    "zh-TW": "台灣正體",
+    "zh-CN": "大陆简体",
+    "es": "Español",
+    "hi": "हिन्दी",
+    "ar": "العربية",
+    "ja": "日本語",
+    "ko": "한국어",
+    "kk": "қазақ"
+  },
+  "ProductLanguages": ["en", "de"],
+  "DefaultLanguage": "en",
+  "Tickets": {
+    "game": {
+      "name": "game.html",
+      "html": ""
+    },
+    "deposit": {
+      "name": "deposit.html",
+      "html": ""
+    },
+    "withdraw": {
+      "name": "withdraw.html",
+      "html": ""
+    },
+    "shift-report": {
+      "name": "shift-report.html",
+      "html": ""
+    }
+  },
+  "DateFormat": "dd mmm, yyyy",
+  "DateTimeFormat": "dd mmm, hh:nn",
+  "TicketDateTimeFormat": "dd.mm.yyyy hh:nn:ss",
+  "ReportDateTimeFormat": "dd mmm, yyyy hh:nn",
+  "AllowAge": 18,
+  "Menus": [
+    {
+      "Id": 1,
+      "Name": "Sport",
+      "Href": "sport",
+      "Group": "products",
+      "SubMenu": [
+        {
+          "Id": 6,
+          "Href": 6,
+          "ExternalId": 1000,
+          "Name": "Sport",
+          "ProviderId": 1,
+          "CashierUrl": "https://sportsbookwebsite.craftbet.com/betshop",
+          "Monitors": [
+            "https://sportsbookwebsite.craftbet.com/monitor.html?type="
+          ],
+          "SystemBet": true,
+          "ExpressBet": true
+        }
+      ]
+    },
+    {
+      "Id": 2,
+      "Name": "Games",
+      "Href": "games",
+      "Group": "products",
+      "SubMenu": [
+        {
+          "Id": 1003,
+          "Href": 1003,
+          "ExternalId": 107,
+          "Name": "Bingo 48",
+          "ProviderId": 100,
+          "CashierUrl": "https://virtualgameswebsite.craftbet.com/bingo48/cashier",
+          "Monitors": [
+            "https://virtualgameswebsite.craftbet.com/bingo48/monitor"
+          ],
+          "SystemBet": false,
+          "ExpressBet": true
+        },
+        {
+          "Id": 1004,
+          "Href": 1004,
+          "ExternalId": 101,
+          "Name": "Keno",
+          "ProviderId": 100,
+          "CashierUrl": "https://virtualgameswebsite.craftbet.com/keno/cashier",
+          "Monitors": [
+            "https://virtualgameswebsite.craftbet.com/keno/monitor"
+          ],
+          "SystemBet": false,
+          "ExpressBet": false
+        },
+        {
+          "Id": 1005,
+          "Href": 1005,
+          "ExternalId": 102,
+          "Name": "Bet On Poker",
+          "ProviderId": 100,
+          "CashierUrl": "https://virtualgameswebsite.craftbet.com/betonpoker/cashier",
+          "Monitors": [
+            "https://virtualgameswebsite.craftbet.com/betonpoker/monitor"
+          ],
+          "SystemBet": false,
+          "ExpressBet": true
+        },
+        {
+          "Id": 1006,
+          "Href": 1006,
+          "ExternalId": 103,
+          "Name": "Bet On Racing",
+          "ProviderId": 100,
+          "CashierUrl": "https://virtualgameswebsite.craftbet.com/betonracing/cashier",
+          "Monitors": [
+            "https://virtualgameswebsite.craftbet.com/betonracing/monitor"
+          ],
+          "SystemBet": false,
+          "ExpressBet": true
+        },
+        {
+          "Id": 1001,
+          "Href": 1001,
+          "ExternalId": 104,
+          "Name": "Bingo 37",
+          "ProviderId": 100,
+          "CashierUrl": "https://virtualgameswebsite.craftbet.com/betonbingo/cashier",
+          "Monitors": [
+            "https://virtualgameswebsite.craftbet.com/betonbingo/monitor"
+          ],
+          "SystemBet": false,
+          "ExpressBet": true
+        },
+        {
+          "Id": 1002,
+          "Href": 1002,
+          "ExternalId": 106,
+          "Name": "Colors",
+          "ProviderId": 100,
+          "CashierUrl": "https://virtualgameswebsite.craftbet.com/colors/cashier",
+          "Monitors": [
+            "https://virtualgameswebsite.craftbet.com/colors/monitor"
+          ],
+          "SystemBet": false,
+          "ExpressBet": true
+        },
+        {
+          "Id": 104001,
+          "Href": 104001,
+          "ExternalId": "mylucky6_blue",
+          "Name": "Lucky6",
+          "ProviderId": 104,
+          "CashierUrl": "",
+          "Monitors": [
+            ""
+          ],
+          "SystemBet": false,
+          "ExpressBet": true
+        }
+      ]
+    },
+    {
+      "Id": 3,
+      "Href": "e-games",
+      "Name": "External",
+      "Group": "products",
+      "SubMenu": [
+        {
+          "Id": 60001,
+          "Href": 60001,
+          "ExternalId": 106,
+          "Name": "Kiron",
+          "ProviderId": 60,
+          "CashierUrl": "",
+          "Monitors":[],
+          "SystemBet": false,
+          "ExpressBet": true
+        }
+      ]
+    },
+    {
+      "Id": 4,
+      "Name": "Payments",
+      "Href": "payments",
+      "SubMenu": [
+        {
+          "Id": 1,
+          "Name": "Deposit",
+          "Href": "deposit"
+        },
+        {
+          "Id": 2,
+          "Name": "Withdraw",
+          "Href": "withdraw"
+        }
+      ]
+    },
+    {
+      "Id": 5,
+      "Name": "Reports",
+      "Href": "reports",
+      "SubMenu": [
+        {
+          "Id": 1,
+          "Name": "ReportByBets",
+          "Href": "report-by-bets"
+        },
+        {
+          "Id": 2,
+          "Name": "ReportByShifts",
+          "Href": "report-by-shifts"
+        },
+        {
+          "Id": 3,
+          "Name": "ReportByTransactions",
+          "Href": "report-by-transactions"
+        },
+        {
+          "Id": 4,
+          "Name": "ReportByPayments",
+          "Href": "report-by-payments"
+        },
+        {
+          "Id": 5,
+          "Name": "ReportByResults",
+          "Href": "report-by-results"
+        }
+      ]
+    },
+    {
+      "Id": 6,
+      "Name": "Accounts",
+      "Href": "accounts",
+      "SubMenu": [
+        {
+          "Id": 1,
+          "Name": "CashDesks",
+          "Href": "cash-desks"
+        },
+        {
+          "Id": 2,
+          "Name": "Terminals",
+          "Href": "terminals"
+        },
+        {
+          "Id": 3,
+          "Name": "Clients",
+          "Href": "clients"
+        },
+        {
+          "Id": 4,
+          "Name": "Register",
+          "Href": "register-client"
+        }
+      ]
+    },
+    {
+      "Id": 7,
+      "Name": "Actions",
+      "SubMenu": [
+        {
+          "Id": 1,
+          "Name": "OpenPayout",
+          "Href": "open-payout"
+        },
+        {
+          "Id": 2,
+          "Name": "MemberCards",
+          "Href": "member-cards"
+        }
+      ]
+    },
+    {
+      "Id": 8,
+      "Name": "Settings",
+      "Href": "settings",
+      "SubMenu": [
+        {
+          "Id": 1,
+          "Name": "Monitors",
+          "Href": "monitors",
+          "Icon": "monitor"
+        },
+        {
+          "Id": 2,
+          "Name": "Devices",
+          "Href": "devices",
+          "Icon": "printer"
+        },
+        {
+          "Id": 3,
+          "Name": "ChangePassword",
+          "Href": "change-password",
+          "Icon": "password"
+        }
+      ]
+    },
+    {
+      "Id": 9,
+      "Name": "Calculator",
+      "SubMenu": [
+        {
+          "Id": 1,
+          "Name": "Calculator",
+          "Href": "calculator"
+        },
+        {
+          "Id": 2,
+          "Name": "CashBox",
+          "Href": "cash-box"
+        }
+      ]
+    }
+  ],
+  "MobileCodes": [
+    {
+      "Title": "DE",
+      "Mask": "",
+      "StyleType": "Germany",
+      "Type": "+49"
+    },
+    {
+      "Title": "PL",
+      "Mask": "",
+      "StyleType": "Poland",
+      "Type": "+48"
+    },{
+      "Title": "DE",
+      "Mask": "",
+      "StyleType": "Germany",
+      "Type": "DE"
+    },{
+      "Title": "IT",
+      "Mask": "",
+      "StyleType": "Italy",
+      "Type": "+39"
+    }
+  ]
+}

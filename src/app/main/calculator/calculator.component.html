@@ -1,0 +1,31 @@
+<header>
+  <img src="assets/images/calculator-d.svg">
+  <span i18n>Calculator</span>
+  @if (dialogData?.close)
+  {
+    <img class="close-button" src="assets/images/close-d.svg" [mat-dialog-close]="true">
+  }
+</header>
+<main>
+  <ag-grid-angular
+    #gridHref
+    style="width: 100%; height: 400px"
+    class="ag-theme-alpine"
+    [pagination]="true"
+    [columnDefs]="columnDefs"
+    [rowModelType]="rowModelType"
+    [cacheBlockSize]="cacheBlockSize"
+    [defaultColDef]="defaultColDef"
+    [rowData]="rowData()"
+    [animateRows]="true"
+    (gridReady)="onGridReady($event)"
+  ></ag-grid-angular>
+
+</main>
+<footer>
+  <mat-icon (click)="printData()">print</mat-icon>
+  <div>Total in: {{totals().betAmount}} {{currency}}</div>
+  <div>Total out: {{totals().winAmount}} {{currency}}</div>
+  <div>Total pay: {{totals().pays}} {{currency}}</div>
+</footer>
+

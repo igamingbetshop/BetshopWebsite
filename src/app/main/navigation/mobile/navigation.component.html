@@ -1,0 +1,38 @@
+<div class="navigation">
+  @for (menu of menus(); track menu.Id)
+  {
+    @if(menu.HasChildren)
+    {
+      <div class="collapse-box" collapse>
+        <div class="header">
+          <span>{{menu.Name}}</span>
+          <img ngSrc="assets/images/arrow-down.svg" height="12" width="20">
+        </div>
+        <ul class="content">
+          @for (subMenu of menu.SubMenu; track subMenu.Id)
+          {
+            <li (click)="selectionChange($event, subMenu.RouterLink)">{{subMenu.Name}}</li>
+          }
+        </ul>
+      </div>
+    }
+    @else
+    {
+      <div class="collapse-box">
+        <div class="header" (click)="selectionChange($event, menu.RouterLink)">
+          <span>{{menu.Name}}</span>
+        </div>
+      </div>
+    }
+  }
+  <div class="collapse-box">
+    <div class="header" (click)="openTicketValidation()">
+      <span>Ticket Validation</span>
+    </div>
+  </div>
+  <div class="collapse-box">
+    <div class="header" (click)="authService.logout()">
+      <span class="logout">Log out</span>
+    </div>
+  </div>
+</div>

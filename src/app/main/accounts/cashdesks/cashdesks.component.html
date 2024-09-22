@@ -1,0 +1,8 @@
+<ag-grid-angular
+    style="width: 100%; height: calc(100% - 85px)"
+    class="ag-theme-alpine"
+    [columnDefs]="columnDefs"
+    [rowData]="rowData()"
+    [animateRows]="true"
+    (gridReady)="onGridReady($event)"
+  ></ag-grid-angular>

@@ -1,0 +1,24 @@
+<div class="printers">
+  <div class="title">Devices</div>
+  <div class="sub-title">Have you can select devices</div>
+  <div class="form">
+    <label>Terminal Printers</label>
+    <mat-form-field>
+      <mat-select [value]="printService.thermalPrinter()" placeholder="Select terminal printer" (selectionChange)="printService.setPrinter($event.value, 'thermal')">
+        @for (printer of printService.printers(); track $index) {
+          <mat-option [value]="printer">{{printer}}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+
+    <label>Printers</label>
+    <mat-form-field>
+      <mat-select [value]="printService.solidInkPrinter()" placeholder="Select printer" (selectionChange)="printService.setPrinter($event.value, 'solidInk')">
+        @for (printer of printService.printers(); track $index) {
+          <mat-option [value]="printer">{{printer}}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+  </div>
+</div>
+

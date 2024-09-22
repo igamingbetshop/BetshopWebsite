@@ -1,0 +1,32 @@
+@import 'mixins';
+.printers
+{
+  .title{font-size: 1.75rem;font-weight: 700; text-align: center}
+  .sub-title{font-size: 1.125rem; color: #79859B; text-align: center; margin: 8px 0 20px 0}
+  padding: 10px 25px;
+  width: 400px;
+  margin: 0 auto;
+  @include flex-h-center();
+  flex-direction: column;
+  .form
+  {
+    background: white;
+    padding: 20px 20px 0 20px;
+    mat-form-field{width: 100%; &:first-of-type{border-bottom: 1px solid #E1EAFD; margin-bottom: 15px}}
+    @include flex-h-center();
+    flex-direction: column;
+    border-radius: 10px;
+    label{font-size: 0.875rem;font-weight: 600; margin-bottom: 4px}
+  }
+}
+
+@media (max-width: 720px)
+{
+  .printers
+  {
+    .title{text-align: left}
+    .sub-title{text-align: left;}
+    padding: 10px 25px;
+    width: calc(100vw - 10px);
+  }
+}

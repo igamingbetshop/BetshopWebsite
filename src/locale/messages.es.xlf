@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="5218858556359278590" datatype="html">
+        <source><x id="PH" equiv-text="deposit.Amount"/> <x id="PH_1" equiv-text="deposit.CurrencyId"/> fue depositada con éxito</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/payments/deposit/deposit.component.ts</context>
+          <context context-type="linenumber">66</context>
+        </context-group>
+      </trans-unit>
+     <trans-unit id="7616770651914901276" datatype="html">
+        <source>Product</source>
+        <target>Producto</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/reports/report-by-bets/report-by-bets.component.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+       <trans-unit id="3476285207374951390" datatype="html">
+        <source>Unit Name</source>
+        <target>Nombre de la unidad</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/reports/report-by-bets/report-by-bets.component.ts</context>
+          <context context-type="linenumber">73</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5452881409775077105" datatype="html">
+        <source>balance</source>
+        <target>balance</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/navigation/navigation.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5653531963388315526" datatype="html">
+        <source>limit</source>
+        <target>Límite</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/navigation/navigation.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6856078176363658744" datatype="html">
+        <source>Select product</source>
+        <target>Seleccionar producto</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/reports/filters/bets-filter/bets-filter.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/reports/filters/results-filter/results-filter.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1616102757855967475" datatype="html">
+        <source>All</source>
+        <target>Todos</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/reports/filters/bets-filter/bets-filter.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/reports/filters/bets-filter/bets-filter.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6802278531377016537" datatype="html">
+        <source>Seleccionar estado</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/reports/filters/bets-filter/bets-filter.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3011112932753861347" datatype="html">
+        <source>Barcode</source>
+        <target>Código de barras</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/reports/filters/payments-filter/payments-filter.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/reports/filters/payments-filter/payments-filter.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4580988005648117665" datatype="html">
+        <source>Search</source>
+        <target>Buscar</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/reports/filters/report-filter/report-filter.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/ticket-validation/ticket-validation.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="193735854885505934" datatype="html">
+        <source>Enter a date range</source>
+        <target>Fecha de Inicio</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/reports/filters/time-filter/time-filter.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5162686434580248853" datatype="html">
+        <source>Start</source>
+        <target>Fecha de Inicio</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/reports/filters/time-filter/time-filter.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3453574195971625719" datatype="html">
+        <source>Last shift count</source>
+        <target>Cuenta de últimos turnos</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/reports/filters/transactions-filter/transactions-filter.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3425524123318762147" datatype="html">
+        <source>Shift count</source>
+        <target>últimos turnos</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/reports/filters/transactions-filter/transactions-filter.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="108273660500271246" datatype="html">
+        <source>By date</source>
+        <target>Por fecha</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/reports/filters/transactions-filter/transactions-filter.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3102220583235640970" datatype="html">
+        <source>By shift</source>
+        <target>Por turnos</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/reports/filters/transactions-filter/transactions-filter.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6582573664846559511" datatype="html">
+        <source>Change Password</source>
+        <target>Cambiar la contraseña</target>
+
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/settings/change-password/change-password.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/settings/change-password/change-password.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2397816345463091163" datatype="html">
+        <source>Old Password</source>
+        <target>Contraseña anterior</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/settings/change-password/change-password.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1221596867309460035" datatype="html">
+        <source>New Password</source>
+        <target>Nueva contraseña</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/settings/change-password/change-password.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3241357959735682038" datatype="html">
+        <source>Confirm Password</source>
+        <target>Confirmar Contraseña</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/settings/change-password/change-password.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8610863444245237438" datatype="html">
+        <source>Terminal Printers</source>
+        <target>Impresoras terminales</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/settings/devices/devices.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9182414002942169146" datatype="html">
+        <source>Printers</source>
+        <target>Impresoras</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/settings/devices/devices.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8197760814140039374" datatype="html">
+        <source>Select language</source>
+        <target>Seleccione el idioma</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/settings/languages/languages.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8058994642732449354" datatype="html">
+        <source>Monitor</source>
+        <target>Monitora</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/settings/monitors/monitors.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7593555694782789615" datatype="html">
+        <source>Open</source>
+        <target>Abierta</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/settings/monitors/monitors.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7655972656593559917" datatype="html">
+        <source>Ticket validation</source>
+        <target>Validación de billetes</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/ticket-validation/ticket-validation.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5470585151622287386" datatype="html">
+        <source>Ticket barcode</source>
+        <target>Código de barras del billete</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/ticket-validation/ticket-validation.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7748211731345343214" datatype="html">
+        <source>Ticket id</source>
+         <target>Identificación de entradas</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/ticket-validation/ticket-validation.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5611592591303869712" datatype="html">
+        <source>Status</source>
+         <target>Estado</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/ticket-validation/ticket-validation.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6660884889021179834" datatype="html">
+        <source>Bet amount</source>
+         <target>Monto de la apuesta</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/ticket-validation/ticket-validation.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7716850678407896582" datatype="html">
+        <source>Win amount</source>
+         <target>Cantidad ganada</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/ticket-validation/ticket-validation.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3973931101896534797" datatype="html">
+        <source>Date</source>
+        <target>Fecha</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/ticket-validation/ticket-validation.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6252070156626006029" datatype="html">
+        <source>None</source>
+        <target>Ninguna</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/ticket-validation/ticket-validation.component.html</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5419001233788766837" datatype="html">
+        <source>Higher odds</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/ticket-validation/ticket-validation.component.html</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2446067295361017520" datatype="html">
+        <source>Any odds</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/ticket-validation/ticket-validation.component.html</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3571391964903695725" datatype="html">
+        <source>Repeat</source>
+         <target>Repetir</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/ticket-validation/ticket-validation.component.html</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6381106447433185332" datatype="html">
+        <source>Ticket not found</source>
+         <target>Boleto no encontrado</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/ticket-validation/ticket-validation.component.html</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

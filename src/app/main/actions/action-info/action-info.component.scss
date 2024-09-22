@@ -1,0 +1,28 @@
+@import 'mixins';
+:host
+{
+  width: 250px;
+  height: 180px;
+  display: block;
+  header
+  {
+    color: white;
+    padding-left: 10px;
+    background: #4280ff;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .close-button{color: white}
+  }
+  main
+  {
+    height: 105px;
+    padding: 10px;
+  }
+  footer
+  {
+    @include flex-h-center;
+    display: flex;
+  }
+}

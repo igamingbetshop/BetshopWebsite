@@ -1,0 +1,18 @@
+<mat-form-field>
+  <mat-label i18n>Select product</mat-label>
+  <mat-select  (selectionChange)="reportService.update({'ProductId':$event.value})">
+    <mat-option i18n>All</mat-option>
+    @for (product of products(); track product.Id) {
+      <mat-option [value]="product.Id">{{product.Name}}</mat-option>
+    }
+  </mat-select>
+</mat-form-field>
+<mat-form-field>
+  <mat-label i18n>Select status</mat-label>
+  <mat-select (selectionChange)="reportService.update({'State':$event.value})">
+    <mat-option i18n>All</mat-option>
+    @for (status of statuses(); track status.Value) {
+      <mat-option [value]="status.Value">{{status.Name}}</mat-option>
+    }
+  </mat-select>
+</mat-form-field>

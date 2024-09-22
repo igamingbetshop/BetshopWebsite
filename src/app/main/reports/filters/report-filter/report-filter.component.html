@@ -1,0 +1,16 @@
+<bs-time-filter></bs-time-filter>
+@defer (when type() === 'bets';) {
+  <bs-bets-filter></bs-bets-filter>
+}
+@defer (when type() === 'payments') {
+  <bs-payments-filter></bs-payments-filter>
+}
+@defer (when type() === 'transactions') {
+  <bs-transactions-filter></bs-transactions-filter>
+}
+@defer (when type() === 'results') {
+  <bs-results-filter></bs-results-filter>
+}
+
+<button mat-raised-button color="primary" (click)="search()" i18n>Search</button>
+<button mat-raised-button color="primary" (click)="closeShift()" i18n>Close shift</button>

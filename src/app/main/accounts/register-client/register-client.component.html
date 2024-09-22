@@ -1,0 +1,121 @@
+<div class="page">
+  <form class="register-form" [formGroup]="formGroup" (submit)="submit()">
+    <div class="title" i18n>Register customer</div>
+    @for (field of fields(); track field.Title)
+    {
+      @switch (field.Type)
+      {
+        @case ("text")
+        {
+          <mat-form-field [style.order]="field.Order">
+            <mat-label i18n>{{field.Title}}</mat-label>
+            <input i18n-placeholder matInput  [formControlName]="field.Title">
+            @if(formGroup.get(field.Title)?.hasError('required'))
+            {
+              <mat-error>
+                {{field.Title}} is required
+              </mat-error>
+            }
+            @if(formGroup.get(field.Title)?.hasError('pattern'))
+            {
+              <mat-error>
+                {{field.Title}} not valid
+              </mat-error>
+            }
+          </mat-form-field>
+        }
+        @case ("checkbox")
+        {
+          <div class="checkbox-field" [style.order]="field.Order">
+            <mat-checkbox [formControlName]="field.Title">{{field.Title}}</mat-checkbox>
+            @if(formGroup.get(field.Title)?.touched && formGroup.get(field.Title)?.hasError('required'))
+            {
+              <div class="error-field">
+                {{field.Title}} is required
+              </div>
+            }
+          </div>
+        }
+
+        @case("birth-date")
+        {
+          <bs-birth-date [field]="field" [style.order]="field.Order"></bs-birth-date>
+        }
+        @case("mobile")
+        {
+          <bs-mobile-number [field]="field" [style.order]="field.Order"></bs-mobile-number>
+        }
+        @case("gender")
+        {
+          <mat-form-field [style.order]="field.Order">
+            <mat-label i18n>{{field.Title}}</mat-label>
+            <mat-select [formControlName]="field.Title">
+              <mat-option value="">Gender</mat-option>
+              <mat-option value="1">Male</mat-option>
+              <mat-option value="2">Female</mat-option>
+            </mat-select>
+            @if(formGroup.get(field.Title)?.hasError('required'))
+            {
+              <mat-error>
+                {{field.Title}} is required
+              </mat-error>
+            }
+            @if(formGroup.get(field.Title)?.hasError('pattern'))
+            {
+              <mat-error>
+                {{field.Title}} not valid
+              </mat-error>
+            }
+          </mat-form-field>
+        }
+        @case ("password")
+        {
+          <mat-form-field [style.order]="field.Order">
+            <mat-label i18n>Password</mat-label>
+            <input i18n-placeholder matInput [formControlName]="'Password'">
+            @if(formGroup.get("Password")?.hasError('required'))
+            {
+              <mat-error>
+                Password is required
+              </mat-error>
+            }
+            @if(formGroup.get("Password")?.hasError('pattern'))
+            {
+              <mat-error>
+                Password not valid
+              </mat-error>
+            }
+            @if(formGroup.hasError("confirmedValidator"))
+            {
+              <mat-error>
+                Password and confirmation do not match
+              </mat-error>
+            }
+          </mat-form-field>
+          <mat-form-field [style.order]="field.Order">
+            <mat-label i18n>Confirm Password</mat-label>
+            <input i18n-placeholder matInput placeholder="Client Id" [formControlName]="'ConfirmPassword'">
+            @if(formGroup.get("ConfirmPassword")?.hasError('required'))
+            {
+              <mat-error>
+                Confirm Password is required
+              </mat-error>
+            }
+            @if(formGroup.get("ConfirmPassword")?.hasError('pattern'))
+            {
+              <mat-error>
+                Confirm Password not valid
+              </mat-error>
+            }
+          </mat-form-field>
+        }
+        @case("region")
+        {
+          <bs-region [field]="field" [style.order]="field.Order"></bs-region>
+        }
+      }
+    }
+    <button mat-raised-button color="primary" type="submit"i18n>Register</button>
+  </form>
+  <div class="error-txt">{{errorText()}}</div>
+</div>

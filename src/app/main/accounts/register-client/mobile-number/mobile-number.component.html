@@ -1,0 +1,25 @@
+<mat-form-field class="code">
+  <mat-label>Code</mat-label>
+  <mat-select formControlName="MobileCode">
+    @for(code of codes(); track code.Value)
+    {
+      <mat-option [value]="code.Value">{{code.Value}}</mat-option>
+    }
+  </mat-select>
+</mat-form-field>
+<mat-form-field >
+  <mat-label i18n>Mobile Number</mat-label>
+  <input i18n-placeholder matInput [formControlName]="'MobileNumber'" type="number">
+  @if(parentFormGroup.get("MobileNumber")?.hasError('required'))
+  {
+    <mat-error>
+      MobileNumber is required
+    </mat-error>
+  }
+  @if(parentFormGroup.get("MobileNumber")?.hasError('pattern'))
+  {
+    <mat-error>
+      MobileNumber not valid
+    </mat-error>
+  }
+</mat-form-field>

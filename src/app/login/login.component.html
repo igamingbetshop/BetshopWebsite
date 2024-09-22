@@ -1,0 +1,17 @@
+<form class="form" [formGroup]="formGroup" (ngSubmit)="submit()">
+  <img src="assets/images/logo.svg">
+  <div class="title" i18n>Log In</div>
+  <mat-form-field>
+    <mat-label i18n>Username</mat-label>
+    <input matInput formControlName="UserName">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label i18n>Password</mat-label>
+    <input  #password type="password" matInput formControlName="Password">
+    <mat-icon
+      (click)="password.type = password.type === 'password'? 'text': 'password'">{{password.type === 'text' ? 'visibility' : 'visibility_off'}}</mat-icon>
+  </mat-form-field>
+  <button type="submit" [disabled]="!formGroup.valid" i18n>Log In</button>
+  <div class="error">{{errorText()}}</div>
+
+</form>

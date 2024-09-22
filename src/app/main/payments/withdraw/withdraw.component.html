@@ -1,0 +1,44 @@
+<form class="form" [formGroup]="filterForm" (submit)="search()">
+  <mat-form-field >
+    <mat-label i18n>Client Id</mat-label>
+    <input i18n-placeholder matInput placeholder="Client Id" formControlName="ClientId">
+  </mat-form-field>
+  <mat-form-field >
+    <mat-label i18n>Barcode</mat-label>
+    <input i18n-placeholder matInput placeholder="Barcode" formControlName="Barcode">
+  </mat-form-field>
+  <mat-form-field >
+    <mat-label i18n>Document Number</mat-label>
+    <input i18n-placeholder matInput placeholder="Document Number" formControlName="DocumentNumber">
+  </mat-form-field>
+  <mat-form-field >
+    <mat-label i18n>Cash Code</mat-label>
+    <input i18n-placeholder matInput placeholder="Cash Code" formControlName="CashCode">
+  </mat-form-field>
+  <button mat-raised-button color="primary" type="submit" i18n>Search</button>
+</form>
+
+@if(client())
+{
+  <div class="client">
+    <h2>{{client().ClientFirstName}} {{client().ClientLastName}}</h2>
+    <div i18n>Id</div>
+    <div>{{client().ClientId}}</div>
+    <div i18n>User Name</div>
+    <div>{{client().UserName}}</div>
+    <div i18n>Name</div>
+    <div>{{client().ClientFirstName}} {{client().ClientLastName}}</div>
+    <div i18n>Email</div>
+    <div>{{client().ClientEmail}}</div>
+  </div>
+
+  <div class="client">
+    @for(request of paymentRequests(); track $index)
+    {
+      <div i18n>Amount</div>
+      <div>{{request.Amount}} {{request.CurrencyId}}</div>
+      <div i18n>Date</div>
+      <div>{{request.Amount}} {{request.CreationTime}}</div>
+      <button mat-raised-button color="primary" i18n (click)="pay(request)">Pay</button>    }
+  </div>
+}

@@ -1,0 +1,23 @@
+.register-form{
+  width: clamp(200px, 90%, 750px);
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 10px;
+  margin: 50px auto 0 auto;
+  button, .title{grid-column: 1/-1}
+  .title{text-align: center; font-weight: bold; font-size: 20px}
+  button{order: 100}
+}
+.error-txt{text-align: center; color: red; margin-top: 20px}
+.checkbox-field{
+  position: relative;
+  .error-field
+  {
+    position: absolute;
+    color: red;
+    bottom: 10px;
+    font-size: 12px;
+    left: 10px;
+  }
+}
+.error-txt{text-align: center; color: red; margin-top: 20px}

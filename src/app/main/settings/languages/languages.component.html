@@ -1,0 +1,9 @@
+<mat-form-field>
+  <mat-label i18n>Select language</mat-label>
+  <mat-select (selectionChange)="change($event.value)">
+    <mat-option disabled>Select language</mat-option>
+    @for (language of languages(); track language.Code) {
+      <mat-option [value]="language">{{language.Label}}</mat-option>
+    }
+  </mat-select>
+</mat-form-field>

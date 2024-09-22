@@ -1,0 +1,8 @@
+<mat-form-field>
+  <mat-label i18n>Last shift count</mat-label>
+  <input i18n-placeholder #shiftCountInput matInput placeholder="Shift count" [value]="reportService.filter().LastShiftsNumber" type="number" min="0" step="1" (change)="reportService.update({'LastShiftsNumber':shiftCountInput.value})">
+</mat-form-field>
+<mat-radio-group #shiftCountOptions aria-label="Select an option" [value]="reportService.filter().FilterBy"  (change)="reportService.update({'FilterBy': $event.value})">
+  <mat-radio-button value="date" i18n>By date</mat-radio-button>
+  <mat-radio-button value="shift" i18n>By shift</mat-radio-button>
+</mat-radio-group>

@@ -1,0 +1,8 @@
+<div i18n [matMenuTriggerFor]="menu">Documents</div>
+<mat-menu #menu="matMenu">
+  @for (documentMenu of documents(); track $index)
+  {
+    <button i18n mat-menu-item  [matMenuTriggerFor]="menu.childMenu">{{documentMenu.Menu}}</button>
+    <bs-document-item #menu [documentMenu]="documentMenu"></bs-document-item>
+  }
+</mat-menu>

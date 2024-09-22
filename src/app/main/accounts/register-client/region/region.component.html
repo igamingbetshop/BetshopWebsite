@@ -1,0 +1,10 @@
+<mat-form-field>
+  <mat-label>{{field().Title}}</mat-label>
+  <mat-select [formControlName]="field().Title">
+    <mat-option>Select {{field().Title}}</mat-option>
+    @for(country of countries(); track country.Id)
+    {
+      <mat-option [value]="country.Id">{{country.Name}}</mat-option>
+    }
+  </mat-select>
+</mat-form-field>

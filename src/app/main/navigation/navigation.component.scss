@@ -1,0 +1,82 @@
+@import 'mixins';
+.navigation
+{
+  display: flex;
+  height: 45px;
+  background: #FFFFFF;
+  width: 100%;
+  padding: 0 10px;
+  align-items: center;
+  gap: 8px;
+  .logo{max-width: 100px}
+  .collapse-box
+  {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    position: relative;
+    &.active{
+      background: #6B96F4;
+      .header{
+        color: white;
+        svg path{stroke: white}
+      }
+    }
+    .header
+    {
+      @include flex-v-center;
+      height: 36px;
+      font-size: 1rem;
+      font-weight: 600;
+      svg{margin-left: 8px}
+      cursor: pointer;
+      padding: 0 20px;
+      position: relative;
+    }
+    .content
+    {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      background: white;
+      border-radius: 6px;
+      border: 1px solid #E1EAFD;
+      box-shadow: 0px 0px 18px 0px #00000029;
+      top:50px;
+      color: #182338;
+      font-size: 1.125rem;
+      padding: 10px 0;
+      z-index: 9;
+      li
+      {
+        line-height: 30px;
+        font-weight: 500;
+        text-align: left;
+        padding: 0 10px;
+        cursor: pointer;
+        white-space: nowrap;
+        @include flex-v-center;
+        gap: 8px;
+      }
+    }
+    &.opened
+    {
+      .content{ display: flex;}
+      .header svg{transform: rotate(180deg)}
+    }
+    &.right-content
+    {
+      .content
+      {
+        right: 0;
+      }
+    }
+  }
+  .right-side
+  {
+    @include flex-v-center;
+    margin-left: auto;
+    bs-balance-limit{margin-left: 50px;}
+  }
+  .logout{color: #FF0000; font-size: 1rem}
+}

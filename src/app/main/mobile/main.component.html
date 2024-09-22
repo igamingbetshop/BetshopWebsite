@@ -1,0 +1,30 @@
+<mat-drawer-container class="drawer-container" autosize>
+  <mat-drawer #drawer class="drawer-sidenav" mode="over">
+    <ng-container
+      [ngTemplateOutlet]="headerTemplateRef"
+      [ngTemplateOutletContext]="{type:'close'}">
+    </ng-container>
+    <div class="content">
+      <bs-navigation (selectionChange)="onDrawer(drawer, 'close')"></bs-navigation>
+    </div>
+  </mat-drawer>
+
+  <div class="drawer-sidenav-content">
+    <ng-container
+      [ngTemplateOutlet]="headerTemplateRef"
+      [ngTemplateOutletContext]="{type:'menu'}">
+    </ng-container>
+    <router-outlet></router-outlet>
+  </div>
+</mat-drawer-container>
+
+<ng-template #headerTemplateRef let-type='type'>
+  <header>
+    <button mat-icon-button color="accent" (click)="onDrawer(drawer, type)">
+      <mat-icon>{{type}}</mat-icon>
+    </button>
+    <bs-balance-limit  i18n-type type="balance"></bs-balance-limit>
+    <bs-balance-limit  i18n-type type="limit"></bs-balance-limit>
+  </header>
+</ng-template>
+

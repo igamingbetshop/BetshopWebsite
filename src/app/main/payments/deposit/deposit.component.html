@@ -1,0 +1,55 @@
+<form class="form" [formGroup]="filterForm" (submit)="submit()">
+  <mat-form-field >
+    <mat-label i18n>Client Id</mat-label>
+    <input i18n-placeholder matInput placeholder="Client Id" formControlName="ClientId">
+  </mat-form-field>
+  <mat-form-field >
+    <mat-label i18n>User Name</mat-label>
+    <input i18n-placeholder matInput placeholder="User Name" formControlName="UserName">
+  </mat-form-field>
+  <mat-form-field >
+    <mat-label i18n>Document Number</mat-label>
+    <input i18n-placeholder matInput placeholder="Document Number" formControlName="DocumentNumber">
+  </mat-form-field>
+  <mat-form-field >
+    <mat-label i18n>Email</mat-label>
+    <input i18n-placeholder matInput placeholder="Email" formControlName="Email">
+  </mat-form-field>
+  <button mat-raised-button color="primary" type="submit" i18n>Search</button>
+</form>
+
+@if(client())
+{
+  <div class="client">
+    <h2>{{client().FirstName}} {{client().LastName}}</h2>
+    <div i18n>Id</div>
+    <div>{{client().Id}}</div>
+    <div i18n>Nick Name</div>
+    <div>{{client().UserName}}</div>
+    <div i18n>Name</div>
+    <div>{{client().FirstName}} {{client().SecondName}} {{client().LastName}} {{client().SecondSurname}}</div>
+    <div i18n>Currency</div>
+    <div>{{client().CurrencyId}}</div>
+    <div i18n>Document Type</div>
+    <div>{{client().DocumentType}}</div>
+    <div i18n>Document Number</div>
+    <div>{{client().DocumentNumber}}</div>
+    <div i18n>Status</div>
+    <div>{{client().StatusName}}</div>
+    <div i18n>Deposit Allowed</div>
+    <div>{{client().Allowed}}</div>
+    <div i18n>Creation Time</div>
+    <div>{{client().CreationTime}}</div>
+  </div>
+
+  <form class="form" [formGroup]="depositForm" (submit)="deposit()">
+    <mat-form-field >
+      <mat-label i18n>Amount</mat-label>
+      <input type="number" i18n-placeholder matInput placeholder="Amount" formControlName="Amount">
+    </mat-form-field>
+    <button mat-raised-button color="primary" [disabled]="!depositForm.valid" type="submit" i18n>Deposit</button>
+  </form>
+}
+
+
+
