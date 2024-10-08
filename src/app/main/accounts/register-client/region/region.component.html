@@ -1,6 +1,6 @@
 <mat-form-field>
   <mat-label>{{field().Title}}</mat-label>
-  <mat-select [formControlName]="field().Title">
+  <mat-select [formControlName]="field().Title"  (selectionChange)="getRegions({TypeId:3, ParentId:$event.value})">
     <mat-option>Select {{field().Title}}</mat-option>
     @for(country of countries(); track country.Id)
     {
@@ -8,3 +8,18 @@
     }
   </mat-select>
 </mat-form-field>
+
+@if(type() === 'city')
+{
+  <mat-form-field>
+    <mat-label>City</mat-label>
+    <mat-select [formControlName]="'City'">
+      <mat-option>Select City</mat-option>
+      @for(city of cities(); track city.Id)
+      {
+        <mat-option [value]="city.Id">{{city.Name}}</mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
+}
+

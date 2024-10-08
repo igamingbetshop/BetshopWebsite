@@ -72,7 +72,7 @@
         {
           <mat-form-field [style.order]="field.Order">
             <mat-label i18n>Password</mat-label>
-            <input i18n-placeholder matInput [formControlName]="'Password'">
+            <input i18n-placeholder type="password" matInput [formControlName]="'Password'">
             @if(formGroup.get("Password")?.hasError('required'))
             {
               <mat-error>
@@ -94,7 +94,7 @@
           </mat-form-field>
           <mat-form-field [style.order]="field.Order">
             <mat-label i18n>Confirm Password</mat-label>
-            <input i18n-placeholder matInput placeholder="Client Id" [formControlName]="'ConfirmPassword'">
+            <input i18n-placeholder type="password" matInput placeholder="Client Id" [formControlName]="'ConfirmPassword'">
             @if(formGroup.get("ConfirmPassword")?.hasError('required'))
             {
               <mat-error>
@@ -112,6 +112,10 @@
         @case("region")
         {
           <bs-region [field]="field" [style.order]="field.Order"></bs-region>
+        }
+        @case("region2")
+        {
+          <bs-region [field]="field" [type]="'city'" [style.order]="field.Order"></bs-region>
         }
       }
     }

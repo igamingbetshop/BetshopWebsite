@@ -32,6 +32,7 @@ import {Field} from "../../../../core/types";
 })
 export class RegionComponent implements OnInit{
   field = input.required<Field>();
+  type = input<'city' | 'district' | ''>("");
   parentContainer = inject(ControlContainer);
   countries:WritableSignal<Region[]> = signal([]);
   cities:WritableSignal<Region[]> = signal([]);
@@ -44,6 +45,9 @@ export class RegionComponent implements OnInit{
   {
     this.getRegions({TypeId:Regions.COUNTRY});
     this.parentFormGroup.addControl(this.field().Title, new FormControl("", getValidatorsFromField(this.field())));
+    if(this.type() === 'city')
+      this.parentFormGroup.addControl("City", new FormControl("", getValidatorsFromField(this.field())));
+
   }
 
   getRegions(filter:any)
@@ -51,7 +55,7 @@ export class RegionComponent implements OnInit{
     this.#apiService.apiCall(Methods.GET_REGIONS, filter).pipe(take(1)).subscribe(data => {
       if(data.ResponseCode === 0)
       {
-        if(filter.TypeId === Regions.CITY)
+        if(filter.TypeId === Regions.CITY && this.type() === 'city')
         {
           this.cities.set(data.ResponseObject.Entities);
         }

@@ -58,6 +58,8 @@ export class RegisterClientComponent implements OnInit {
     if(this.formGroup.valid)
     {
       const req = this.formGroup.getRawValue();
+      if(Object.hasOwn(req, "MobileCode"))
+        req.MobileNumber = `${req.MobileCode}${req.MobileNumber}`;
       req.BetShopPaymentSystems = this.paymentSystems().filter(payment => payment.Selected).map(payment => payment.Id);
       this.apiService.apiCall(Methods.REGISTER_CLIENT, req).pipe(take(1)).subscribe(data => {
         if(data.ResponseCode !== 0)
