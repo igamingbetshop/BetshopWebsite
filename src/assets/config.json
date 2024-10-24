@@ -1,6 +1,6 @@
 {
-  "ApiUrl": "https://betshopwebapi.craftbet.com/Main",
-  "SocketUrl": "https://betshopwebapi.craftbet.com",
+  "ApiUrl": "https://betshopweb.api.sftbldrz3.com/Main",
+  "SocketUrl": "https://betshopweb.api.sftbldrz3.com",
   "Version": 1,
   "PrinterUrl": "http://127.0.0.1:8000",
   "Languages": {
