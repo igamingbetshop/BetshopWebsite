@@ -1,6 +1,6 @@
 {
-  "ApiUrl": "https://betshopweb.api.sftbldrz3.com/Main",
-  "SocketUrl": "https://betshopweb.api.sftbldrz3.com",
+  "ApiUrl": "https://betshopweb-api.sftbldrz3.com/Main",
+  "SocketUrl": "https://betshopweb-api.sftbldrz3.com",
   "Version": 1,
   "PrinterUrl": "http://127.0.0.1:8000",
   "Languages": {
@@ -93,9 +93,7 @@
           "Name": "Keno",
           "ProviderId": 100,
           "CashierUrl": "https://virtualgameswebsite.craftbet.com/keno/cashier",
-          "Monitors": [
-            "https://virtualgameswebsite.craftbet.com/keno/monitor"
-          ],
+          "Monitors": ["https://virtualgameswebsite.craftbet.com/keno/monitor"],
           "SystemBet": false,
           "ExpressBet": false
         },
@@ -158,9 +156,7 @@
           "Name": "Lucky6",
           "ProviderId": 104,
           "CashierUrl": "",
-          "Monitors": [
-            ""
-          ],
+          "Monitors": [""],
           "SystemBet": false,
           "ExpressBet": true
         }
@@ -179,7 +175,7 @@
           "Name": "Kiron",
           "ProviderId": 60,
           "CashierUrl": "",
-          "Monitors":[],
+          "Monitors": [],
           "SystemBet": false,
           "ExpressBet": true
         }
@@ -331,12 +327,14 @@
       "Mask": "",
       "StyleType": "Poland",
       "Type": "+48"
-    },{
+    },
+    {
       "Title": "DE",
       "Mask": "",
       "StyleType": "Germany",
       "Type": "DE"
-    },{
+    },
+    {
       "Title": "IT",
       "Mask": "",
       "StyleType": "Italy",
